@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import AOS from "aos";
+import { Link } from "react-router-dom";
 
 import {
   ShieldCheck,
@@ -23,7 +24,7 @@ const bannerData = [
     image: "/img/banner1.png",
     bgColor: "#001a38",
     buttonText: "Get Started",
-    buttonLink: "#",
+    buttonLink: "/contact",
   },
   {
     id: 2,
@@ -33,7 +34,7 @@ const bannerData = [
     image: "/img/banner2.png",
     bgColor: "#183c50",
     buttonText: "Learn More",
-    buttonLink: "#",
+    buttonLink: "/about",
   },
   {
     id: 3,
@@ -43,7 +44,7 @@ const bannerData = [
     image: "/img/banner3.png",
     bgColor: "#38415a",
     buttonText: "Explore Now",
-    buttonLink: "#",
+    buttonLink: "/about",
   },
 ];
 const shopAreas = [
@@ -92,25 +93,25 @@ const sinkCollections = [
     id: 1,
     title: "Smart Kitchen Sinks",
     image: "/img/our-1.png",
-    link: "/smart-kitchen-sinks",
+    link: "/kitchen",
   },
   {
     id: 2,
     title: "Pressed Steel (Hydraulic) Kitchen Sinks",
     image: "/img/our-2.png",
-    link: "/pressed-steel-kitchen-sinks",
+    link: "/kitchen",
   },
   {
     id: 3,
     title: "Handmade Kitchen Sinks",
     image: "/img/our-3.png",
-    link: "/handmade-kitchen-sinks",
+    link: "/kitchen",
   },
   {
     id: 4,
     title: "Quartz Kitchen Sinks",
     image: "/img/our-4.png",
-    link: "/quartz-kitchen-sinks",
+    link: "/kitchen",
   },
 ];const KitchenSinks = () => {
   useEffect(() => {
@@ -198,21 +199,21 @@ const blogData = [
     id: 1,
     title: "How to Choose the Right Kitchen Sink for Your Home?",
     image: "/img/blog-1.png",
-    link: "/blogs/how-to-choose-kitchen-sink",
+    link: "/blogs",
     alt: "Modern stainless steel kitchen sink",
   },
   {
     id: 2,
     title: "Stainless Steel vs Quartz Kitchen Sinks: Which Is Better?",
     image: "/img/blog-2.png",
-    link: "/blogs/stainless-steel-vs-quartz-sinks",
+    link: "blogs",
     alt: "Different kitchen sink materials and designs",
   },
   {
     id: 3,
     title: "Single Bowl vs Double Bowl Kitchen Sinks: A Complete Guide",
     image: "/img/blog-3.png",
-    link: "/blogs/single-bowl-vs-double-bowl-sinks",
+    link: "blogs",
     alt: "Modern double bowl kitchen sink",
   },
 ];

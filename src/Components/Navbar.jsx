@@ -20,12 +20,12 @@ const announcements = [
 
 const products = [
     {
-        name: "PVC Braided Hose Pipe Plant",
-        path: "/PVC-braided-hose-pipe-plant",
+        name: "Kitchen Sink",
+        path: "/kitchen",
     },
     {
-        name: "High Speed Mixer",
-        path: "/High-speed-mixer",
+        name: "Taps",
+        path: "/taps",
     },
 ];
 

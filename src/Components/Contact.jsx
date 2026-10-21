@@ -143,7 +143,7 @@ const FAQ = () => {
                                     </p>
 
                                     <div className="learn-more">
-                                        <a className="btn-solid theme-success" href="./About.jsx">
+                                        <a className="btn-solid theme-success" href="/about">
                                             Learn more
                                         </a>
                                     </div>

@@ -146,33 +146,20 @@ const Footer = () => {
             <ul>
 
               <li>
-                <Link to="/PVC-braided-hose-pipe-plant">
-                  Sink
+                <Link to="/kitchen">
+                  Kitchen Sink
                 </Link>
               </li>
 
               <li>
-                <Link to="/Tubing-pipe-plant">
-                  Sink
+                <Link to="/taps">
+                  Taps
                 </Link>
               </li>
 
 
-              <li>
-                <Link to="/Suction-pipe-plant">
-                  Sink
-                </Link>
-              </li>
-              <li>
-                <Link to="/HDPE-pipe-plant">
-                  Sink
-                </Link>
-              </li>
-              <li>
-                <Link to="/Rigid-pvc-pipe-plant">
-                 Sink
-                </Link>
-              </li>
+              
+              
 
             </ul>
 
@@ -203,7 +190,7 @@ const Footer = () => {
               </span>
 
               <span>
-                Mr.Name 
+                Mr.Pankaj Garg
               </span>
 
             </a>
