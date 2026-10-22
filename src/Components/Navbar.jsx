@@ -262,7 +262,17 @@ const Navbar = () => {
                                         Gallery
                                     </NavLink>
                                 </li>
-
+                                <li>
+                                    <NavLink
+                                        to="/blogs"
+                                        onClick={closeMenu}
+                                        className={({ isActive }) =>
+                                            `oe-nav-link ${isActive ? "active" : ""}`
+                                        }
+                                    >
+                                        Blog
+                                    </NavLink>
+                                </li>
                                 <li>
                                     <NavLink
                                         to="/contact"

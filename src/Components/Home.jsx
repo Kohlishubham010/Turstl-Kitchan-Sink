@@ -610,7 +610,7 @@ const Home = () => {
       <div className="trustil-choice-container">
 
         <div className="trustil-choice-content">
-
+          
           <div className="trustil-choice-subtitle">
             WHY CHOOSE TRUSTIL
           </div>
@@ -659,7 +659,13 @@ const Home = () => {
       <div className="trustil-blog-container">
 
         {/* SECTION HEADING */}
+        
         <div className="trustil-blog-heading">
+          <span className="trustil-why-subtitle">
+              OUR LATEST BLOGS
+            </span>
+
+           
           <h2>THE TRUSTIL BLOGS</h2>
 
           <p>

@@ -35,25 +35,35 @@ const toggleFAQ = (index) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const [result, setResult] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const businessEmail = "info@yourbrand.com";
-
-    const subject = encodeURIComponent(
-      `Kitchen Enquiry - ${form.enquiry}`
-    );
-
-    const body = encodeURIComponent(
-      `Name: ${form.name}\n` +
-      `Phone: ${form.phone}\n` +
-      `Email: ${form.email}\n` +
-      `Enquiry: ${form.enquiry}\n\n` +
-      `Message: ${form.message}`
-    );
-
-    window.location.href =
-      `mailto:${businessEmail}?subject=${subject}&body=${body}`;
+    if (isSubmitting) return;
+    setResult("");
+    setIsSubmitting(true);
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "40475044-a8e8-41cc-a7a1-b5661b60963a");
+    formData.append("subject", `New Kitchen Enquiry - ${form.enquiry}`);
+    formData.append("from_name", "Trustl Kitchen Contact Form");
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setResult("Thank you! Your message has been sent successfully.");
+        setForm({ name: "", phone: "", email: "", enquiry: "", message: "" });
+      } else {
+        setResult(data.message || "Message could not be sent. Please try again.");
+      }
+    } catch (error) {
+      setResult("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactCards = [
@@ -110,12 +120,6 @@ const faqs = [
   },
 ];
 
-const FAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const toggleFAQ = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };}
     return (
         <>
             {/* banner  */}
@@ -297,14 +301,9 @@ const FAQ = () => {
                           Kitchen Sink
                         </option>
                         <option value="Kitchen Faucet">
-                          Kitchen Faucet
+                          Kitchen Taps
                         </option>
-                        <option value="Kitchen Accessories">
-                          Kitchen Accessories
-                        </option>
-                        <option value="Other Enquiry">
-                          Other Enquiry
-                        </option>
+                        
                       </select>
                     </div>
                   </div>
@@ -328,14 +327,22 @@ const FAQ = () => {
                     <button
                       type="submit"
                       className="premium-submit-btn"
+                       disabled={isSubmitting}
                     >
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                       <ArrowRight size={23} />
                     </button>
                   </div>
 
                 </div>
               </form>
+               {result && (
+                 <p role="status" aria-live="polite" className="mt-3"
+                    style={{ color: result.startsWith("Thank you") ? "#167d41" : "#b42318" }}>
+                   {result}
+                 </p>
+               )}
+
 
             </div>
           </div>
