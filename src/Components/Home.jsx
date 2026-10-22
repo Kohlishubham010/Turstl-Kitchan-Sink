@@ -206,14 +206,14 @@ const blogData = [
     id: 2,
     title: "Stainless Steel vs Quartz Kitchen Sinks: Which Is Better?",
     image: "/img/blog-2.png",
-    link: "blogs",
+    link: "/blogs",
     alt: "Different kitchen sink materials and designs",
   },
   {
     id: 3,
     title: "Single Bowl vs Double Bowl Kitchen Sinks: A Complete Guide",
     image: "/img/blog-3.png",
-    link: "blogs",
+    link: "/blogs",
     alt: "Modern double bowl kitchen sink",
   },
 ];
