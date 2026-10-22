@@ -10,7 +10,7 @@ const blog = {
     "Choosing the right kitchen sink is an important decision when designing or renovating your kitchen. Two popular options are stainless steel and quartz composite kitchen sinks. Both materials offer different advantages in terms of durability, appearance, maintenance, and cost. Understanding the differences between stainless steel vs quartz kitchen sinks can help you select the best option for your kitchen space and everyday requirements.",
 };
 
-const blog2 = () => {
+const Blog2 = () => {
   return (
     <>
      {/* Banner Section */}
@@ -265,4 +265,4 @@ const blog2 = () => {
   )
 }
 
-export default blog2
+export default Blog2

@@ -11,7 +11,7 @@ const blog = {
     "Modern kitchen taps have become an important part of stylish and functional kitchen interiors. A well-chosen kitchen tap can make washing dishes, preparing meals, and cleaning vegetables more convenient while enhancing the overall appearance of your kitchen. With different materials, finishes, spout styles, and practical features available, selecting the right kitchen tap can help create a comfortable and efficient cooking space.",
 };
 
-const blog3 = () => {
+const Blog3 = () => {
   return (
     <>
      {/* Banner Section */}
@@ -273,4 +273,4 @@ const blog3 = () => {
   )
 }
 
-export default blog3
+export default Blog3

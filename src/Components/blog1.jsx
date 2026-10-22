@@ -7,7 +7,7 @@ const blog = {
   intro:
     "A well-designed kitchen sink is more than just a functional necessity—it has become an essential part of modern kitchen interiors. With innovative designs, premium finishes, and practical features, contemporary kitchen sinks help create a stylish and efficient cooking space.",
 };
-const blog1 = () => {
+const Blog1 = () => {
   return (
     <>
      {/* Banner Section */}
@@ -117,4 +117,4 @@ const blog1 = () => {
   )
 }
 
-export default blog1
+export default Blog1
